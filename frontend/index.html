@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GabeChoice — your next game, blessed by Gaben.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="login-screen" class="login-screen hidden">
+    <div class="login-card">
+      <div class="login-brand">
+        <span class="brand-mark" style="font-size:2rem">◈</span>
+        <span class="brand-name" style="font-size:1.5rem">GabeChoice</span>
+      </div>
+      <p class="login-tagline">Gaben picks your next game.</p>
+      <a href="/auth/steam/login" class="btn-steam-login">
+        <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_01.png"
+             alt="Sign in through Steam" height="35" />
+      </a>
+      <div class="login-divider"><span>or</span></div>
+      <div class="login-manual">
+        <input id="manual-steam-id" type="text" class="manual-input" placeholder="Enter Steam ID 64…" />
+        <button id="btn-manual-login" class="btn-ghost">Continue</button>
+      </div>
+      <p id="login-error" class="login-error hidden"></p>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-mark">◈</span>
+      <span class="brand-name">GabeChoice</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active" data-section="deck">Command Deck</a>
+      <a href="#" class="nav-link stub" data-section="wishlist">Wishlist Radar</a>
+      <a href="#" class="nav-link stub" data-section="library">Library</a>
+      <a href="#" class="nav-link stub" data-section="taste">Taste Profile</a>
+      <a href="#" class="nav-link stub" data-section="agent">Agent</a>
+    </div>
+    <div class="nav-user hidden" id="nav-user">
+      <span id="nav-steam-id" class="nav-steam-id"></span>
+      <button id="btn-logout" class="btn-ghost" style="font-size:.75rem;padding:.25rem .6rem">Sign out</button>
+    </div>
+    <button id="btn-recommend" class="btn-ask">
+      <span class="btn-spinner hidden">⟳</span>
+      <span class="btn-label">Ask&nbsp;Gaben</span>
+    </button>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <p id="greeting" class="greeting"></p>
+      <p id="subheading" class="subheading"></p>
+    </header>
+
+    <div class="mood-bar">
+      <span class="mood-label">Mood</span>
+      <div class="mood-pills">
+        <button class="mood-pill active">Anything</button>
+        <button class="mood-pill">Relaxed</button>
+        <button class="mood-pill">Challenge me</button>
+        <button class="mood-pill">Story time</button>
+        <button class="mood-pill">Quick session</button>
+        <button class="mood-pill">Deep dive</button>
+        <button class="mood-pill surprise">Surprise me ✦</button>
+      </div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+      <div class="pulse-row"><span></span><span></span><span></span></div>
+      <p class="loading-msg">Agent is reading your Steam history…</p>
+    </div>
+
+    <div id="error-banner" class="error-banner hidden"></div>
+
+    <section id="results" class="results hidden">
+      <div id="hero-section"></div>
+      <div id="taste-banner"></div>
+      <div class="recs-header">
+        <h2 class="section-title">Recommended for you</h2>
+        <span id="recs-count" class="recs-count"></span>
+      </div>
+      <div id="recs-list"></div>
+      <footer id="run-stats" class="run-stats"></footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
