@@ -4,6 +4,9 @@
 
 GabeChoice is a personal agentic Steam recommendation tool. It reads your library and wishlist, builds a taste profile from your play history, and produces ranked recommendations with LLM-generated reasoning — all running locally against your own API keys.
 
+<img width="800" height="450" alt="gabechoice-overview" src="https://github.com/user-attachments/assets/ea558d31-6157-4a4e-8196-6984464b6456" />
+
+
 ---
 
 ## Features
