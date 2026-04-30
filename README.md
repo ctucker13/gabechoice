@@ -1,6 +1,6 @@
 # GabeChoice
 
-> *Gaben picks your next game.*
+> *GabeN picks your next game.*
 
 GabeChoice is a personal agentic Steam recommendation tool. It reads your library and wishlist, builds a taste profile from your play history, and produces ranked recommendations with LLM-generated reasoning — all running locally against your own API keys.
 
